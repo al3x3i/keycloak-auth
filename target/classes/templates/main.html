@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customer Portal</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="text-center">
+        <h1>Welcome to the Customer Portal</h1>
+    </div>
+    <div>
+        <h2>Existing Customers</h2>
+        <div class="well">
+            <b>Show customers: </b><a th:href="@{/customers}">Customers</a>
+        </div>
+    </div>
+    <div id="pagefoot" th:insert="~{footer :: footerFragment}">Footer
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: auth-app-login
+            authorization-grant-type: authorization_code
+            scope: openid
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:9999/realms/SpringBootKeycloakAuth
+            user-name-attribute: preferred_username
+    resourceserver:
+      jwt:
+        issuer-uri: http://localhost:9999/realms/SpringBootKeycloakAuth
+
+
